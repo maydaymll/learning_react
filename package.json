@@ -1,19 +1,29 @@
 {
-  "name": "learning_react",
-  "version": "1.0.0",
-  "description": "react demos",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maydaymll/learning_react.git"
-  },
-  "author": "djuny",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maydaymll/learning_react/issues"
-  },
-  "homepage": "https://github.com/maydaymll/learning_react#readme"
+    "name": "learning_react",
+    "version": "1.0.0",
+    "description": "react demos",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "go": "open http://localhost:3000; npm run server",
+        "e2e": "nightwatch",
+        "test": "./node_modules/.bin/concurrently -k 'npm run server' 'npm run e2e'",
+        "start": "http-server . -p 3000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maydaymll/learning_react.git"
+    },
+    "author": "djuny",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maydaymll/learning_react/issues"
+    },
+    "homepage": "https://github.com/maydaymll/learning_react#readme",
+    "dependencies": {
+        "http-server": "0.8.5"
+    },
+    "devDependencies": {
+        "concurrently": "2.2.0"
+    }
 }
